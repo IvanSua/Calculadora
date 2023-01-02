@@ -7,70 +7,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora con html y css</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="index.css" />
+  
   </head>
   <body>
-    
-    <div class="contenedor">
-      <form class="calculadora" name="calcu">
-        <input type="text" readonly class="resultado" name="res" />
-        <span class="tecla clear" onclick="document.calcu.res.value = ''  ">
-          C
-        </span>
-        <span class="tecla funciones" onclick="document.calcu.res.value += '/'  ">
-          /
-        </span>
-        <span class="tecla funciones" onclick="document.calcu.res.value += '*'  ">
-          *
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '7'  ">
-          7
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '8'  ">
-          8
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '9'  ">
-          9
-        </span>
-        <span class="tecla funciones" onclick="document.calcu.res.value += '-'  ">
-          -
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '4'  ">
-          4
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '5'  ">
-          5
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '6'  ">
-          6
-        </span>
-        <span class="tecla mas" onclick="document.calcu.res.value += '+'  ">
-          +
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '1'  ">
-          1
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '2'  ">
-          2
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '3'  ">
-          3
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '0'  ">
-          0
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '00'  ">
-          00
-        </span>
-        <span class="tecla" onclick="document.calcu.res.value += '.'  ">
-          .
-        </span>
-        <span
-          class="tecla funciones"
-          onclick="document.calcu.res.value = eval(document.calcu.res.value)  ">
-          =
-        </span>
-      </form>
+    <header>
+      <div class="titulo">
+        <h1>Bienvenido a mi calcualdora 3.0</h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="calculator dark">
+          <div class="display-screen">
+              <div id="display"></div>
+          </div>
+          <div class="buttons">
+            <table>
+              <tr>
+                  <td><button class="btn-operator" id="clear">C</button></td>
+                  <td><button class="btn-operator" id="/">&divide;</button></td>
+                  <td><button class="btn-operator" id="*">&times;</button></td>
+                  <td>
+                      <div  class="theme-toggler active">
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                  <td><button class="btn-number" id="7">7</button></td>
+                  <td><button class="btn-number" id="8">8</button></td>
+                  <td><button class="btn-number" id="9">9</button></td>
+                  <td><button class="btn-operator" id="-">-</button></td>
+              </tr>
+              <tr>
+                  <td><button class="btn-number" id="4">4</button></td>
+                  <td><button class="btn-number" id="5">5</button></td>
+                  <td><button class="btn-number" id="6">6</button></td>
+                  <td><button class="btn-operator" id="+">+</button></td>
+              </tr>
+              <tr>
+                  <td><button class="btn-number" id="1">1</button></td>
+                  <td><button class="btn-number" id="2">2</button></td>
+                  <td><button class="btn-number" id="3">3</button></td>
+                  <td rowspan="2"><button class="btn-equal" id="equal">=</button></td>
+              </tr>
+              <tr>
+                  <td><button class="btn-operator" id="(">(</button></td>
+                  <td><button class="btn-number" id="0">0</button></td>
+                  <td><button class="btn-operator" id=")">)</button></td>
+              </tr>
+          </table>
+          </div>
+      </div>
+  </div>
+
+
+  <footer>
+    <div class="fot">
+      <div class="titulo">
+        <h2>Ivan Suarez Ezequiel</h2>
+        <address>+9 54 11-6297-0250 / ivansuarez2007@hotmail.com</address>
+      </div>
+        <div class="redes">
+          <a href="https://github.com/IvanSua" class="link">
+          <img src="imgen/001-github.png" class="Github" width="40px" alt="">
+          </a>
+          <a href="https://www.linkedin.com/in/ivan-suarez-766b29228/" class="link">
+          <img src="imgen/logotipo-de-linkedin.png" class="LinkedIn" width="40px" alt="">
+          </a>
+      </div>
     </div>
+  </footer>
+  <script src="index.js"></script>
   </body>
 </html>
+
